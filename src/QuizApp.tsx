@@ -28,7 +28,7 @@ function QuizApp() {
 
     useEffect(() => {
         if (quiz.state === "not_started") {
-            const questions = pickUniqueQuestions().slice(0, 5);
+            const questions = pickUniqueQuestions();
             dispatch(setQuestions(questions));
         }
     }, [quiz.state]);
